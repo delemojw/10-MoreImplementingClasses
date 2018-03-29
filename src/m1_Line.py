@@ -219,7 +219,8 @@ class Line(object):
         self.start = start.clone()
         self.end = end.clone()
         self.c = 0
-
+        self.p1 = self.start.clone()
+        self.p2 = self.end.clone()
 
 
         # --------------------------------------------------------------
@@ -565,8 +566,11 @@ class Line(object):
           :type  other_line: Line
           :rtype: Line:
         """
+        p1 = Point((self.start.x - other_line.start.x), (self.start.y - other_line.start.y))
+        p2 = Point((self.end.x - other_line.end.x), (self.end.y - other_line.end.y))
+        return Line(p1, p2)
         # --------------------------------------------------------------
-        # TODO: 10.
+        # DONE: 10.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -592,8 +596,12 @@ class Line(object):
         Type hints:
           :rtype: Point
         """
+        x = (self.end.x + self.start.x) / 2
+        y = (self.end.y + self.start.y) / 2
+        p1 = Point(x, y)
+        return p1
         # --------------------------------------------------------------
-        # TODO: 11.
+        # DONE: 11.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -628,8 +636,16 @@ class Line(object):
           :type  line2: Line
           :rtype: bool
         """
+
+        slope1 = self.slope()
+        slope2 = line2.slope()
+        if round(slope2, 12) == round(slope1, 12):
+            return True
+        else:
+            return False
+
         # --------------------------------------------------------------
-        # TODO: 12.
+        # DONE: 12.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -693,8 +709,13 @@ class Line(object):
             print(line1)  # Should print: Line[(-3, -4), (3, 4)]
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
+
+        self.start = self.p1
+        self.end = self.p2
+
+
         # --------------------------------------------------------------
-        # TODO: 13.
+        # DONE: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
