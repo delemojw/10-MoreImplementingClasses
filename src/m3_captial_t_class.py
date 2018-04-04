@@ -136,6 +136,10 @@ class CapitalT(object):
           :type height:   int
           :type letter_thickness:   int
         """
+        self.width = width.clone()
+        self.height = height.clone()
+        self.intersection_center = intersection_center.clone()
+        self.letter_thickness = letter_thickness.clone()
         # --------------------------------------------------------------
         # TODO: 3.
         #   READ the above specification, including the Example.
