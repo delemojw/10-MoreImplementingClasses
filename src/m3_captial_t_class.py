@@ -276,7 +276,7 @@ class CapitalT(object):
         Type hints:
           :rtype: CapitalT
         """
-        self.CapitalT = CapitalT.clone()
+        
         # --------------------------------------------------------------
         # TODO: 7.
         #   READ the above specification, including the Example.
