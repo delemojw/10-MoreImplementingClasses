@@ -18,8 +18,8 @@ def main():
 
     # run_test_simple_t()
     # run_test_set_colors()
-    run_test_move_by()
-    # run_test_clone()
+    # run_test_move_by()
+    run_test_clone()
 
 
 def run_test_simple_t():
@@ -178,7 +178,7 @@ class CapitalT(object):
         window.continue_on_mouse_click()
 
         # --------------------------------------------------------------
-        # TODO: 4.
+        # DONE: 4.
         #   READ the above specification, including the Example.
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
@@ -211,7 +211,7 @@ class CapitalT(object):
 
 
         # --------------------------------------------------------------
-        # TODO: 5.
+        # DONE: 5.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
@@ -249,7 +249,7 @@ class CapitalT(object):
         self.v_rect.get_lower_right_corner().x = self.v_rect.get_lower_right_corner().x + dx
         self.v_rect.get_lower_right_corner().y = self.v_rect.get_lower_right_corner().y + dy
         # --------------------------------------------------------------
-        # TODO: 6.
+        # DONE: 6.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
